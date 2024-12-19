@@ -1,0 +1,392 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #27262b;
+}
+
+/* index page */
+
+.main {
+    background-color: #36343b;
+    width: 1500px;
+    height: 650px;
+    margin: auto;
+    /* centers horizontally */
+    position: absolute;
+    /* necessary for vertical centering */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #36343b;
+    border-radius: 50px;
+
+
+}
+
+#notHead {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    color: yellow;
+}
+
+.notHeadContainer {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+}
+
+.notHeadContainer2 {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: yellow;
+}
+
+.gridContainer {
+    display: flex;
+    justify-content: center;
+    margin: 60px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 700px);
+    grid-template-rows: repeat(1, 400px);
+    gap: 50px;
+
+}
+
+.information {
+    border-width: 2px;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 50px;
+}
+
+.login_signin {
+    border-width: 2px;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 50px;
+}
+
+.buttoncontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_grid {
+    display: grid;
+    grid-template-columns: repeat(1, 200px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 50px;
+    margin: 72px;
+}
+
+.login {
+    background-color: #36343b;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-width: 2px;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 50px;
+    transition: background-color 0.15s, opacity 0.15s;
+}
+
+.signup {
+    background-color: #36343b;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-width: 2px;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 50px;
+    transition: background-color 0.15s, opacity 0.15s;
+}
+
+.login:hover {
+    background-color: #27262b;
+    cursor: pointer;
+}
+
+.login:active {
+    opacity: 0.5;
+}
+
+.signup:hover {
+    background-color: #27262b;
+    cursor: pointer;
+}
+
+.signup:active {
+    opacity: 0.5;
+}
+
+.information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.information_container {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: justify;
+    color: white;
+}
+
+/* login page */
+
+.login_page_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.login_page {
+    background-color: #36343b;
+    height: 500px;
+    width: 350px;
+    box-shadow: 2px 2px 7px 5px black;
+}
+
+.text_container {
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    color: grey;
+}
+
+.email_input {
+
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    padding-left: 20px;
+    padding-top: 10px;
+    align-items: baseline;
+}
+
+.email_input_icon {
+    font-size: 25px;
+}
+
+input {
+    width: 200px;
+    height: 50px;
+    outline: none;
+    background-color: #36343b;
+    border: none;
+    font-size: 20px;
+}
+
+.underline_container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.underline {
+    background-color: black;
+    width: 300px;
+    height: 2px;
+}
+
+.password_input {
+    padding-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    padding-left: 20px;
+    align-items: baseline;
+}
+
+.password_input_icon {
+    font-size: 25px;
+}
+
+.login_button_container {
+    display: flex;
+    justify-content: center;
+}
+
+.login_button {
+    width: 150px;
+    height: 50px;
+    background-color: #27262b;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    transition: background-color 0.2s opacity 0.2s;
+}
+
+.login_button:hover {
+    background-color: #36343b;
+    cursor: pointer;
+}
+
+.login_button:active {
+    opacity: 0.75;
+}
+
+.cancel_button_container {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+
+.cancel_button {
+    width: 150px;
+    height: 50px;
+    background-color: #27262b;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    transition: background-color 0.2s opacity 0.2s;
+}
+
+.cancel_button:hover {
+    background-color: #36343b;
+    cursor: pointer;
+}
+
+.cancel_button:active {
+    opacity: 0.75;
+}
+
+.sign_up_container {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-top: 20px;
+    height: 50px;
+}
+
+
+.sign_up_button {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 75px;
+    height: 14px;
+    border: none;
+    background-color: #36343b;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+}
+
+.sign_up_button:hover {
+    cursor: pointer;
+}
+
+.sign_up_button:active {
+    text-shadow: 2px 2px 2px black;
+}
+
+
+/* sign in page */
+
+.sigin_page_container {
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sigin_page {
+    background-color: #36343b;
+    height: 500px;
+    width: 350px;
+    box-shadow: 2px 2px 7px 5px black;
+}
+
+.return_container {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 50px;
+}
+
+.return_button {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 75px;
+    height: 14px;
+    border: none;
+    background-color: #36343b;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+}
+
+.return_button:hover {
+    cursor: pointer;
+}
+
+.return_button:active {
+    text-shadow: 2px 2px 2px black;
+}
+
+
+.sign_in_button_container {
+    display: flex;
+    padding-top: 10px;
+    justify-content: center;
+}
+
+.sign_in_button {
+    width: 150px;
+    height: 50px;
+    background-color: #27262b;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    transition: background-color 0.2s opacity 0.2s;
+}
+
+.sign_in_button:hover {
+    background-color: #36343b;
+    cursor: pointer;
+}
+
+.sign_in_button:active {
+    opacity: 0.75;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}

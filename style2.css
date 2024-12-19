@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    background-color: #27262b;
+}
+
+.profileContainer{
+    display: flex;
+    justify-content: right;
+    padding-right: 30px;
+    padding-top: 30px;
+}
+
+.profile{
+    width: 400px;
+    height: 70px;
+    display: flex;
+    border-radius: 10px;
+    background-color: #36343b;
+    align-items: center;
+    justify-content: center;
+}
+
+.username{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.difficulty_level_container{
+    display: grid;
+    grid-template-columns: 100px 150px;
+    grid-template-rows: 25px;
+    gap: 20px;
+    padding-top: 35px;
+    padding-left: 175px;
+    padding-bottom: 30px;
+}
+
+.difficulty_text{
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 6px;
+    color: white;
+    font-size:25px;
+    display: flex;
+    justify-content: center;
+}
+
+.dropbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #36343b;
+    color:white;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    border:#27262b 2px solid;
+    transition: opacity 0.15s;
+}
+
+.dropbtn:hover{
+    cursor: pointer;
+   opacity: 0.75;
+}
+
+.difficulty_levels{
+
+    display: inline-block;
+    position:relative;
+}
+
+.drop_down_content{
+    display: none;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #36343b;
+    color:white;
+    width: 150px;
+    height: 50px;
+    border:#36343b 2px solid;
+    border-radius: 15px;
+    transition: opacity 0.15s;
+}
+
+.buttons:Hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.show{
+    display: block;
+    width: 150px;
+    height: 150px;
+    border: #27262b 2px solid;
+    border-radius: 15px;
+    position: absolute;
+    background-color:#36343b;
+}
+
+.timer{
+    padding-left: 170px;
+    padding-top: 20px;
+}
+
+.time{
+    color: yellow;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+
+.typing_area_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.typing_area{
+    background-color: #36343b;
+    width: 1200px;
+    height: 350px;
+    border-radius: 15px;
+}
