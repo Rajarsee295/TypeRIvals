@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Amatic+SC:wght@400;700&display=swap');
 body {
     font-family: Arial, sans-serif;
     height: 100vh;
@@ -5,14 +6,14 @@ body {
     background-color: #27262b;
 }
 
-.profileContainer{
+.profileContainer {
     display: flex;
     justify-content: right;
     padding-right: 30px;
     padding-top: 30px;
 }
 
-.profile{
+.profile {
     width: 400px;
     height: 70px;
     display: flex;
@@ -22,13 +23,13 @@ body {
     justify-content: center;
 }
 
-.username{
+.username {
     color: white;
     font-weight: bold;
     font-size: 20px;
 }
 
-.difficulty_level_container{
+.difficulty_level_container {
     display: grid;
     grid-template-columns: 100px 150px;
     grid-template-rows: 25px;
@@ -38,89 +39,94 @@ body {
     padding-bottom: 30px;
 }
 
-.difficulty_text{
+.difficulty_text {
+    font-family: "Amatic SC", serif;
+    font-size: 30px;
     padding-top: 6px;
     color: white;
-    font-size:25px;
     display: flex;
     justify-content: center;
 }
 
-.dropbtn{
+.dropbtn {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #36343b;
-    color:white;
+    color: white;
     width: 150px;
     height: 50px;
     border-radius: 15px;
-    border:#27262b 2px solid;
+    border: #27262b 2px solid;
     transition: opacity 0.15s;
+    font-family: "Amatic SC", serif;
+    font-size: 30px;
 }
 
-.dropbtn:hover{
+.dropbtn:hover {
     cursor: pointer;
-   opacity: 0.75;
+    opacity: 0.75;
 }
 
-.difficulty_levels{
+.difficulty_levels {
 
     display: inline-block;
-    position:relative;
+    position: relative;
 }
 
-.drop_down_content{
+.drop_down_content {
     display: none;
 }
 
-.buttons{
+.buttons {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #36343b;
-    color:white;
+    color: white;
     width: 150px;
     height: 50px;
-    border:#36343b 2px solid;
+    border: #36343b 2px solid;
     border-radius: 15px;
     transition: opacity 0.15s;
+    font-family: "Amatic SC", serif;
+    font-size: 20px;
 }
 
-.buttons:Hover{
+.buttons:Hover {
     cursor: pointer;
     opacity: 0.5;
 }
 
-.show{
+.show {
     display: block;
     width: 150px;
     height: 150px;
     border: #27262b 2px solid;
     border-radius: 15px;
     position: absolute;
-    background-color:#36343b;
+    background-color: #36343b;
 }
 
-.timer{
+.timer {
     padding-left: 170px;
     padding-top: 20px;
 }
 
-.time{
+.time {
     color: yellow;
     font-family: 'Courier New', Courier, monospace;
     font-size: 30px;
 }
 
-.typing_area_container{
+.typing_area_container {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 30px;
 }
 
-.typing_area{
+.typing_area {
     background-color: #36343b;
     width: 1200px;
     height: 350px;
@@ -131,59 +137,75 @@ body {
     color: gray;
     padding-right: 20px;
     padding-left: 20px;
-    font-size: 35px ;
+    font-size: 35px;
     overflow: hidden;
 }
 
-.buttons_time{
-  display: flex;
-  gap:10px;
+.buttons_time {
+    display: flex;
+    gap: 10px;
 }
 
-.fifteen, .thirty, .forty_five, .sixty{
-    color: white;
-    background-color:#27262b;
-    border:none;
-    font-family: 'Courier New', Courier, monospace;
+.fifteen,
+.thirty,
+.forty_five,
+.sixty {
+    font-family: "Amatic SC", serif;
     font-size: 20px;
+    color: white;
+    background-color: #27262b;
+    border: none;
+    
 }
 
-.fifteen:hover , .thirty:hover, .forty_five:hover, .sixty:hover{
+.fifteen:hover,
+.thirty:hover,
+.forty_five:hover,
+.sixty:hover {
     background-color: #36343b;
     cursor: pointer;
 }
 
-.letters{
+.letters {
     color: grey;
     display: inline-block;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: sans-serif;
+    position: relative;
 }
 
-@keyframes blink{
-    0%{
-        opacity: 1;
-    }
-    50%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-.cursor{
-    width: 2px;
+.cursor {
+    width: 3px;
     height: 27px;
     background-color: yellow;
     position: fixed;
-    top: 384px;
+    top: 417px;
     left: 215px;
-    animation: blink 0.3s infinite;
+    border-radius: 50px;
+    transition: top 0.15s ease, left 0.15s ease;
 }
 
-.typing_area_main_container{
+.typing_area_main_container {
+    width: 1100px;
+    height: 125px;
+    overflow: hidden;
+}
 
-  width: 1100px;
-  height: 125px;
-  overflow: hidden;
+.footer{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.restart{
+    border: none;
+    background-color: #27262b;
+    font-size: 20px;
+    color: white;
+    opacity: 0.5;
+    transition: opacity 0.1s;
+}
+
+.restart:hover{
+    cursor: pointer;
+    opacity: 0.75;
 }

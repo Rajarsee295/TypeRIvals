@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #27262b;
+}
+
+.main_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(2,475px);
+    grid-template-rows: repeat(1,600px);
+    gap:200px;
+}
+
+
+.result{
+    background-color: #36343b;
+    border: white 2px solid;
+    border-radius: 10px;
+}
+
+.buttons{
+    background-color: #36343b;
+    border:white 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.button_container{
+    display:grid;
+    grid-template-columns: 200px;
+    grid-template-rows: repeat(3,100px);
+    gap: 20px;
+}
+
+.play_again{
+    background-color: #36343b;
+    border:yellow 2px solid;
+    color: yellow;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.play_again:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.play_again:active{
+    background-color: grey;
+}
+
+.sign_out{
+    background-color: #36343b;
+    border:yellow 2px solid;
+    color: yellow;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.sign_out:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.sign_out:active{
+    background-color: grey;
+}
+
+.leaderboard{
+    background-color: #36343b;
+    border:yellow 2px solid;
+    color: yellow;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.leaderboard:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.leaderboard:active{
+    background-color: grey;
+}
+
+.result_text_container{
+    display: flex;
+    height:70px;
+    justify-content: center;
+    padding-top: 20px;
+    
+}
+
+.result_text{
+   color: yellow;
+   font-family:"Agu Display",serif;
+   font-size:50px;
+}
+
+.underline_container{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.underline{
+    height: 3px;
+    width: 200px;
+    background-color: yellow;
+}
+
+.wpm_container{
+    padding-top: 50px;
+    padding-left: 25px;
+    display: flex;
+    justify-content: left;
+}
+
+.wpm{
+    font-size: 25px;
+    color:grey;
+}
+
+.time_container{
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: left;
+}
+
+.time{
+    font-size: 25px;
+    color: grey;
+}
+
+.accuracy_container{
+    padding-top: 20px;
+    padding-bottom:10px;
+    padding-left: 25px;
+    display: flex;
+    justify-content: left;
+}
+
+.accuracy{
+    font-size: 25px;
+    color:grey;
+}
+
+.raw_container{
+    padding-top: 20px;
+    padding-left: 25px;     
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: left;
+}
+
+.raw{
+    font-size: 25px;
+    color:grey;
+}
+
+.character_container{
+    padding-top: 20px;
+    padding-left: 25px;     
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: left;
+}
+
+.character{
+    font-size: 25px;
+    color:grey;
+}
+
+.score{
+    color: yellow;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.time_taken{
+    color: yellow;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.acc{
+    color: yellow;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.characters{
+    color: yellow;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.raw_{
+    color: yellow;
+    font-size: 30px;
+    font-weight: bold;
+}
