@@ -1,6 +1,11 @@
 const  play_button=document.getElementsByClassName("play");
 const sign_out_button=document.getElementsByClassName("sign_out");
 const leaderboard_button=document.getElementsByClassName("leaderboard");
+const profile=document.getElementsByClassName("profile");
+
+profile[0].addEventListener("mousedown",()=>{
+   window.location.href="profile.html";
+});
 
 play_button[0].addEventListener("click",function(){
   window.location.href="typingpage.html";

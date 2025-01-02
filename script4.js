@@ -17,3 +17,9 @@ const sign_out=document.getElementsByClassName("sign_out");
 sign_out[0].addEventListener("click",function(){
    window.location.href="index.html";
 });
+
+const doct=document.getElementsByClassName("acc");
+doct[0].innerHTML=localStorage.getItem("accuracy");
+
+const chars=document.getElementsByClassName("characters");
+chars[0].innerHTML=localStorage.getItem("correct_character")+" / "+localStorage.getItem("wrong_letters")+" / "+localStorage.getItem("extra_letters");

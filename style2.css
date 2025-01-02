@@ -76,6 +76,7 @@ body {
 
 .drop_down_content {
     display: none;
+    
 }
 
 .buttons {
@@ -208,4 +209,12 @@ body {
 .restart:hover{
     cursor: pointer;
     opacity: 0.75;
+}
+
+img{
+    width: 50px;
+    border-radius: 50px;
+}
+.profilepicture{
+    padding-left: 10px;
 }

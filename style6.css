@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    background-color: #27262b;
+}
+
+.main_container{
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main{
+    background-color:  #36343b;
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    border: white 1.5px solid;
+}
+
+.profile_picture_container{
+    height: 200px;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    width: 150px;
+    border-radius: 100px;
+}
+
+.username_container{
+    display: flex;
+    padding-left: 20px;
+    padding-top: 10px;
+    height: 30px;
+}
+.username{
+    font-size: 25px;
+    color: yellow;
+}
+.username_text{
+    padding-left:5px;
+    font-size: 22.5px;
+    color: white;
+}
+
+.email_container{
+    display: flex;
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 30px;
+}
+.email{
+    font-size: 25px;
+    color: yellow;
+}
+.email_text{
+    padding-left:5px;
+    font-size: 22.5px;
+    color: white;
+}
+
+.rating_container{
+    display: flex;
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 30px;
+}
+.rating{
+    font-size: 25px;
+    color: yellow;
+}
+.rating_text{
+    padding-left:5px;
+    font-size: 22.5px;
+    color: white;
+}
+.league_container{
+    display: flex;
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 30px;
+}
+.league{
+    font-size: 25px;
+    color: yellow;
+}
+.league_text{
+    padding-left:5px;
+    font-size: 22.5px;
+    color: white;
+}
+.main_menu_container{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.main_menu{
+    background-color: #36343b;
+    border: white 1px solid ;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+}
+
+.main_menu:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.main_menu:active{
+    background-color: grey;
+}
+
+.history_container{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.history{
+    background-color: #36343b;
+    border: white 1px solid ;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+}
+.history:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.history:active{
+    background-color: grey;
+}
