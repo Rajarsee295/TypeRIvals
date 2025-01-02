@@ -178,7 +178,7 @@ body {
     height: 27px;
     background-color: yellow;
     position: fixed;
-    top: 419    px;
+    top: 419px;
     left: 215px;
     border-radius: 50px;
     transition: top 0.15s ease, left 0.15s ease;

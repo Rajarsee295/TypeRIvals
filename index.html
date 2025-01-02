@@ -50,8 +50,8 @@
       </div>
 
       <div class="email_input">
-        <div class="email_input_icon">👤</div>
-        <div class="email_input_text"><input type="text" placeholder=" Enter Username"></div>
+        <div class="email_input_icon">@</div>
+        <div class="email_input_text"><input type="text" placeholder=" Enter Email" class="email_input_login"></div>
       </div>
 
       <div class="underline_container">
@@ -61,7 +61,7 @@
 
       <div class="password_input">
         <div class="password_input_icon">🔒</div>
-        <div class="password_input_text"><input type="text" placeholder="Password"></div>
+        <div class="password_input_text"><input type="text" placeholder="Password" class="password_input_login"></div>
       </div>
 
       <div class="underline_container">
@@ -117,7 +117,12 @@
       <div class="underline_container">
         <div class="underline"></div>
       </div>
-
+      <div class="pfp_uploader">
+        
+        <input type="file" id="fileInput" accept=".jpg,.png"/>
+        <button id="uploadButton">Upload</button>
+        <p id="status"></p>
+      </div>
 
       <div class="sign_in_button_container">
         <button class="sign_in_button">SIGN UP</button>
@@ -130,6 +135,7 @@
 
 
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script type="module" src="script2.js"></script>
  
 </body>

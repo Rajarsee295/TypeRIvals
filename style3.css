@@ -60,3 +60,11 @@ button:hover{
 button:active{
     opacity: 0.5;
 }
+
+img{
+    width: 50px;
+    border-radius: 50px;
+}
+.profilepicture{
+    padding-left: 10px;
+}
