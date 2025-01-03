@@ -118,11 +118,21 @@
         <div class="underline"></div>
       </div>
       <div class="pfp_uploader">
-        
-        <input type="file" id="fileInput" accept=".jpg,.png"/>
+
+        <input type="file" id="fileInput" accept=".jpg,.png" />
         <button id="uploadButton">Upload</button>
         <p id="status"></p>
       </div>
+
+      <label for="country-selector">Choose a Country:</label>
+      <select id="country-selector">
+        <option value="">Select a country</option>
+        <option value="USA">United States</option>
+        <option value="Canada">Canada</option>
+        <option value="UnitedKingdom">United Kingdom</option>
+        <option value="India">India</option>
+        <option value="Australia">Australia</option>
+      </select>
 
       <div class="sign_in_button_container">
         <button class="sign_in_button">SIGN UP</button>
@@ -137,6 +147,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script type="module" src="script2.js"></script>
- 
+
 </body>
+
 </html>

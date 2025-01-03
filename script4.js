@@ -1,3 +1,5 @@
+let rating=0;
+let league="bronze";
 const score=document.getElementsByClassName("score");
 score[0].innerHTML=localStorage.getItem("wpm");
 
@@ -15,7 +17,13 @@ play_again[0].addEventListener("click",function(){
 
 const sign_out=document.getElementsByClassName("sign_out");
 sign_out[0].addEventListener("click",function(){
+   localStorage.getItem("user_credentials")="";
    window.location.href="index.html";
+});
+
+const main_menu=document.getElementsByClassName("main_menu");
+main_menu[0].addEventListener("click",() => {
+  window.location.href="openingpage.html";
 });
 
 const doct=document.getElementsByClassName("acc");
@@ -23,3 +31,95 @@ doct[0].innerHTML=localStorage.getItem("accuracy");
 
 const chars=document.getElementsByClassName("characters");
 chars[0].innerHTML=localStorage.getItem("correct_character")+" / "+localStorage.getItem("wrong_letters")+" / "+localStorage.getItem("extra_letters");
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+import { getFirestore, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
+const firebaseConfig = {
+  apiKey: "AIzaSyDXyjbDjJdXIBZTY-mMucSPxHW0CceOfeE",
+  authDomain: "typerivals-9c4a8.firebaseapp.com",
+  projectId: "typerivals-9c4a8",
+  storageBucket: "typerivals-9c4a8.firebasestorage.app",
+  messagingSenderId: "1028469431639",
+  appId: "1:1028469431639:web:410edda7f7fc046b883212",
+  measurementId: "G-M0VBHV41BH"
+};
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db=getFirestore();
+const user_uid=localStorage.getItem("user_credentials");
+const func=async() => {
+  try{
+    const docRef = doc(db, "users", user_uid);
+    const docSnap = await getDoc(docRef);
+    const docData=docSnap.data();
+    let array=[];
+    array=docData.wpm_history;
+    array.push(localStorage.getItem("wpm"));
+    rating=docData.Rating;
+    let r=rating;
+    let rating_diff=0;
+    if(array.length==1){
+      rating =parseInt(array[array.length - 1], 10);
+    }
+    else{
+      
+      const lastWpm = parseInt(array[array.length - 1], 10); // Last WPM
+      const previousWpm = parseInt(array[array.length - 2], 10); // Previous WPM
+      rating_diff = lastWpm - previousWpm;
+    }
+    rating=rating+rating_diff;
+    if(rating<0){
+      rating=0;
+    }
+    else if(rating>=100 && rating <=200){
+      league="Silver";
+    }
+    else if(rating>=200 && rating <=300){
+      league="Gold";
+    }
+    else if(rating>=300 && rating <=400){
+      league="Platinum";
+    }
+    else if(rating>=500 && rating <=600){
+      league="Diamond";
+    }
+    else if(rating>=600 && rating <=700){
+      league="Ascendant";
+    }
+    else if(rating>=700){
+      league="Radiant";
+    }
+   let diff=rating-r;
+   const rating_text=document.getElementsByClassName("rating_text");
+   const rating_change=document.getElementsByClassName("rating_change");
+   rating_text[0].innerHTML=rating;
+   if(diff<0){
+      rating_change[0].style.color="red";
+      rating_change[0].innerHTML=diff;
+   }
+   else if(diff == 0){
+      rating_change[0].style.color="blue";
+      rating_change[0].innerHTML="+"+diff;
+   }
+   else{
+      rating_change[0].style.color="green";
+      rating_change[0].innerHTML="+"+diff;
+   }
+
+    await updateDoc(docRef, {
+      wpm_history: array,
+      Rating: rating,
+      league: league,
+    });
+    const docRef2 = doc(db, "leaderboard", user_uid);
+    const docSnap2 = await getDoc(docRef);
+    const docData2=docSnap.data();
+    await updateDoc(docRef2,{
+      Rating: rating,
+    })
+  }catch(error){
+    alert(error.message);
+  }
+};
+
+func();

@@ -6,9 +6,9 @@ profile[0].addEventListener("mousedown",()=>{
    window.location.href="profile.html";
 });
 drop_btn[0].addEventListener("click", function () {
-   console.log(addDisplay[0].classList);
+   
    addDisplay[0].classList.add("show");
-   console.log(addDisplay[0].classList);
+   
 });
 
 window.addEventListener("click", function (event) {
@@ -49,7 +49,7 @@ fifteen[0].addEventListener("click", function () {
    sixty[0].style.color = "white";
    timer = 15;
    time[0].innerHTML = timer;
-   console.log(time[0].innerHTML)
+ 
 });
 
 thirty[0].addEventListener("click", function () {
@@ -81,7 +81,7 @@ sixty[0].addEventListener("click", function () {
 
 const API_KEY = "AIzaSyC3UIoywSyq_3dIAsdxkXslz3ZxESDFehY";
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
-const message_to_be_sent = "generate a new unique paragraph in 100 words using only small letters and spaces no special characters no symbols no number no fullstop and do not create a paragraph created before";
+const message_to_be_sent = "generate a new unique paragraph in 200 words using only small letters and spaces no special characters no symbols no number no fullstop and do not create a paragraph created before";
 let str = "";
 const typing_area = document.getElementsByClassName("typing_area_main_container");
 let words="";
@@ -98,7 +98,6 @@ const generateAPIResponse = async () => {
       })
 
       const data = await response.json();
-      console.log(data)
       str = data.candidates[0].content.parts[0].text;
 
       for (let i = 0; i < str.length; i++) {
@@ -109,7 +108,7 @@ const generateAPIResponse = async () => {
          }
          typing_area[0].innerHTML += `<span class="letters" id="${i}">${char}</span>`;
       }
-      console.log(str);
+     
       words = document.querySelectorAll(".letters");
    } catch (error) {
       console.log(error)
@@ -142,7 +141,7 @@ let wrong_letters_intermediate = 0;
 window.addEventListener("keydown", function (event) {
 
    if (selected_difficulty == 'Newbie') {
-      console.log("newbie");
+    
 
       if (/^[a-zA-Z]$/.test(event.key)) {
          if (event.key != str.charAt(counter)) {
@@ -402,7 +401,7 @@ window.addEventListener("keydown", function (event) {
       }
    }
    else if (selected_difficulty == "Expert") {
-      console.log("Expert");
+     
       if (/^[a-zA-Z]$/.test(event.key)) {
          if (event.key != str.charAt(counter)) {
             wpm_calculator();
@@ -484,7 +483,6 @@ restart[0].addEventListener("click", function () {
    counter = 0;
    position = -42;
    words.forEach(word => {
-      console.log(word)
       word.style.color = "grey";
       word.style.textDecoration = "none";
    });
@@ -499,6 +497,8 @@ restart[0].addEventListener("click", function () {
    wpm=0;
    generateAPIResponse();
 });
+
+
 
 function time_counting() {
    timer_copy = timer;
@@ -519,39 +519,39 @@ function time_counting() {
 
 
 
-/**
-  const username_text=document.getElementsByClassName("username");
+
+const username_text=document.getElementsByClassName("username");
 const pciture=document.getElementsByClassName("profilepicture1");
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
-const firebaseConfig = {
-  apiKey: "AIzaSyDXyjbDjJdXIBZTY-mMucSPxHW0CceOfeE",
-  authDomain: "typerivals-9c4a8.firebaseapp.com",
-  projectId: "typerivals-9c4a8",
-  storageBucket: "typerivals-9c4a8.firebasestorage.app",
-  messagingSenderId: "1028469431639",
-  appId: "1:1028469431639:web:410edda7f7fc046b883212",
-  measurementId: "G-M0VBHV41BH"
-};
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db=getFirestore();
-const user_uid=localStorage.getItem("user_credentials");
-const profilepic=document.getElementsByClassName("profilepicture1");
+   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+   import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
+   const firebaseConfig = {
+   apiKey: "AIzaSyDXyjbDjJdXIBZTY-mMucSPxHW0CceOfeE",
+   authDomain: "typerivals-9c4a8.firebaseapp.com",
+   projectId: "typerivals-9c4a8",
+   storageBucket: "typerivals-9c4a8.firebasestorage.app",
+   messagingSenderId: "1028469431639",
+   appId: "1:1028469431639:web:410edda7f7fc046b883212",
+   measurementId: "G-M0VBHV41BH"
+   };
+   // Initialize Firebase
+   const app = initializeApp(firebaseConfig);
+   const db=getFirestore();
+   const user_uid=localStorage.getItem("user_credentials");
+   const profilepic=document.getElementsByClassName("profilepicture1");
 
-const func=async() => {
-  try{
-    const docRef = doc(db, "users", user_uid);
-    const docSnap = await getDoc(docRef);
-    const docData=docSnap.data();
-    const imageUrl=docData.profile_picture;
-    profilepic[0].src=imageUrl;
-    console.log(imageUrl);
-    username_text[0].innerHTML=docData.Username;
-  }catch(error){
-    alert(error.message);
-  }
-};
-func();
- */
+   const func=async() => {
+   try{
+      const docRef = doc(db, "users", user_uid);
+      const docSnap = await getDoc(docRef);
+      const docData=docSnap.data();
+      const imageUrl=docData.profile_picture;
+      profilepic[0].src=imageUrl;
+    
+      username_text[0].innerHTML=docData.Username;
+   }catch(error){
+      alert(error.message);
+   }
+   };
+   func();
+

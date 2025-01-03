@@ -320,10 +320,15 @@ input {
     align-items: center;
 
 }
+#country-selector {
+    width: 200px;
+    padding: 8px;
+    font-size: 14px;
+}
 
 .sigin_page {
     background-color: #36343b;
-    height: 600px;
+    height: 650px;
     width: 350px;
     box-shadow: 2px 2px 7px 5px black;
 }

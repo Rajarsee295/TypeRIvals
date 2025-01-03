@@ -79,7 +79,7 @@ body {
     background-color: grey;
 }
 
-.leaderboard{
+.main_menu{
     background-color: #36343b;
     border:yellow 2px solid;
     color: yellow;
@@ -88,12 +88,12 @@ body {
     border-radius: 10px;
 }
 
-.leaderboard:hover{
+.main_menu:hover{
     opacity: 0.7;
     cursor: pointer;
 }
 
-.leaderboard:active{
+.main_menu  :active{
     background-color: grey;
 }
 
@@ -146,6 +146,25 @@ body {
 .time{
     font-size: 25px;
     color: grey;
+}
+.rating_container{
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: left;
+}
+
+.rating{
+    font-size: 25px;
+    color: grey;
+}
+.rating_text{
+    font-size: 25px;
+    color:yellow;
+}
+.rating_change{
+    font-size: 22.5px;
 }
 
 .accuracy_container{

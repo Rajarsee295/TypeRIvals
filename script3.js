@@ -3,6 +3,10 @@ const sign_out_button=document.getElementsByClassName("sign_out");
 const leaderboard_button=document.getElementsByClassName("leaderboard");
 const profile=document.getElementsByClassName("profile");
 
+leaderboard_button[0].addEventListener("click",()=>{
+  window.location.href="leaderboard_page.html";
+});
+
 profile[0].addEventListener("mousedown",()=>{
    window.location.href="profile.html";
 });
@@ -12,6 +16,7 @@ play_button[0].addEventListener("click",function(){
 });
 
 sign_out_button[0].addEventListener("click",function(){
+    localStorage.getItem("user_credentials")="";
     window.location.href="index.html";
   });
 
