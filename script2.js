@@ -116,8 +116,7 @@ main_sign_in_btn[0].addEventListener("click", function () {
           Rating: 0,
           profile_picture: imageUrl,
           league: "Bronze",
-          wpm_history: [],
-          country:selected_country,
+          wpm: [],
         });
         console.log("Document successfully written!");
       } catch (error) {
@@ -142,7 +141,25 @@ main_sign_in_btn[0].addEventListener("click", function () {
     };
     addDocumentWithFields_2();
 
-
+   
+    const addDocumentWithFields_3 = async () => {
+      try {
+        const docRef = doc(db, "history", userCredential.user.uid);
+        await setDoc(docRef, {
+          wpm_history: [],
+          correct_characters_history:[],
+          wrong_characters_history:[],
+          extra_characters_history:[],
+          rating_history:[],
+          rating_change_history:[],
+          accuracy_history:[],
+        });
+        console.log("Document successfully written!");
+      } catch (error) {
+        console.error("Error adding document:", error);
+      }
+    };
+    addDocumentWithFields_3();
     sign_in_page[0].classList.remove("show");
     login_page[0].classList.add("show");
   })
@@ -160,9 +177,6 @@ const password_input_login = document.getElementsByClassName("password_input_log
 login_button_2[0].addEventListener("click", function () {
   signInWithEmailAndPassword(auth, email_input_login[0].value.trim(), password_input_login[0].value.trim()).then((userCredential) => {
     localStorage.setItem("user_credentials", userCredential.user.uid);
-    console.log(userCredential.user.uid);
-    const hi = localStorage.getItem("user_credentials");
-    console.log(hi);
     console.log("successful");
     window.location.href = "openingpage.html";
   })

@@ -93,7 +93,7 @@ body {
     cursor: pointer;
 }
 
-.main_menu  :active{
+.main_menu :active{
     background-color: grey;
 }
 

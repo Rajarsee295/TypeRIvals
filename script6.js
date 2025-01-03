@@ -44,7 +44,7 @@ const func = async () => {
         querySnapshot.forEach(doc => {
             players.push(doc.data());
         });
-        players.sort((a, b) => b.rating - a.rating);
+        players.sort((a, b) => b.Rating - a.Rating);
         
         if(templates_classes.length>0){
             templates_classes.forEach((index)=>{
@@ -141,3 +141,7 @@ const func = async () => {
     }
 };
 func();
+
+document.getElementsByClassName("return")[0].addEventListener("click",()=>{
+  window.location.href="openingpage.html";
+});

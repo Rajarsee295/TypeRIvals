@@ -2,6 +2,11 @@ const main_menu=document.getElementsByClassName("main_menu");
 main_menu[0].addEventListener("click",() => {
   window.location.href="openingpage.html";
 });
+
+document.getElementsByClassName("history")[0].addEventListener("click",()=>{
+  window.location.href="history_page.html";
+})
+
 const username_text=document.getElementsByClassName("username_text");
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";

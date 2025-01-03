@@ -1,5 +1,9 @@
 const  play_button=document.getElementsByClassName("play");
 const sign_out_button=document.getElementsByClassName("sign_out");
+sign_out_button[0].addEventListener("click",function(){
+  localStorage.setItem("user_credentials", "");
+  window.location.href="index.html";
+});
 const leaderboard_button=document.getElementsByClassName("leaderboard");
 const profile=document.getElementsByClassName("profile");
 
@@ -15,10 +19,8 @@ play_button[0].addEventListener("click",function(){
   window.location.href="typingpage.html";
 });
 
-sign_out_button[0].addEventListener("click",function(){
-    localStorage.getItem("user_credentials")="";
-    window.location.href="index.html";
-  });
+
+
 
 const username_text=document.getElementsByClassName("username");
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
