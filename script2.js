@@ -133,6 +133,7 @@ main_sign_in_btn[0].addEventListener("click", function () {
           Username: user_input[0].value.trim(),
           Rating: 0,
           country:selected_country,
+          friends:0,
         });
         console.log("Document successfully written!");
       } catch (error) {

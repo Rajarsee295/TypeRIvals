@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    background-color: #27262b;
+}
+.head_container{
+    font-family: "Agu Display", sans-serif;
+    display: flex;
+    justify-content: center;
+    color: yellow;
+    font-size: 50px;
+    text-decoration: underline;
+}
+.buttons_container{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+.buttons{
+    height: 75px;
+    width: 200px;
+    background-color: #36343b;
+    border: none;
+    border-bottom:yellow 1px solid;
+    margin-left: 1px;
+    font-family: "Agu Display", sans-serif;
+    color: white;
+    font-size: 22.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blend{
+    border-bottom: none ;
+    background-color: #322e2f ;
+}
+.buttons:hover{
+    opacity: 0.75;
+    cursor: pointer;
+}
+.buttons:active{
+    background-color: grey;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.add_friend_container{
+    background-color: #322e2f ;
+    height: 400px;
+    width: 600px;
+    border:yellow 1px solid;
+    border-top: none;
+    display: flex;  
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    padding-top: 25px;
+}
+.search{
+    margin-top: 20px;
+    width: 400px;
+    height: 50px;
+    font-size:20px;
+    border: none;
+}
+.search_button{
+    margin-top: 100px;
+    width: 200px;
+    height: 50px;
+    background-color: #36343b;
+    border: yellow 1px solid;
+    font-size: 20px;
+    color: white;
+    font-family: "Agu Display", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search_button:hover{
+    opacity: 0.75;
+    cursor: pointer;
+}
+.search_button:active{
+    background-color: #27262b;
+}
+.friends_container{
+    display: flex;
+    justify-content: center;
+}
+.friend_{
+   width: 602px;
+   height: 70px;
+   background-color: #322e2f;
+   margin-top: 1px;
+   border: yellow 1px solid;
+   border-top: none;
+   display: grid;
+   grid-template-columns: 150px 450px;
+   grid-template-rows:70px;
+}
+.remove{
+    display: none;
+}
+.profile_picture_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+.text{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    opacity: 0.75;
+}
+.username{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.friend_request{
+    width: 602px;
+    height: 70px;
+    background-color: #322e2f;
+    margin-top: 1px;
+    border: yellow 1px solid;
+    border-top: none;
+    display: grid;
+    grid-template-columns: 150px 300px 150px;
+    grid-template-rows:70px;
+ }
+ .choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .not_ok{
+    margin-left: 20px;
+ }
+ .not_ok:hover{
+   cursor: pointer;
+ }
+.ok:hover{
+    cursor: pointer;
+}
