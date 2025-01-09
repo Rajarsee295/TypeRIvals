@@ -115,8 +115,9 @@ main_sign_in_btn[0].addEventListener("click", function () {
           Username: user_input[0].value.trim(),
           Rating: 0,
           profile_picture: imageUrl,
+          country:selected_country,
           league: "Bronze",
-          wpm: [],
+          wpm_history: [],
         });
         console.log("Document successfully written!");
       } catch (error) {

@@ -81,7 +81,7 @@ sixty[0].addEventListener("click", function () {
 
 const API_KEY = "AIzaSyC3UIoywSyq_3dIAsdxkXslz3ZxESDFehY";
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
-const message_to_be_sent = "generate a new unique paragraph in 200 words using only small letters and spaces no special characters no symbols no number no fullstop and do not create a paragraph created before";
+const message_to_be_sent = "generate a new unique paragraph about coding in 200 words using only small letters and spaces no special characters no symbols no number no fullstop and do not create a paragraph created before";
 let str = "";
 const typing_area = document.getElementsByClassName("typing_area_main_container");
 let words="";
